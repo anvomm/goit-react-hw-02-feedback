@@ -1,17 +1,29 @@
-import { List, ListItem } from './Statistics.styled';
+import { List, Text, TextFromState } from './Statistics.styled';
 
-const Statistics = props => (
-  <List>
-    <ListItem>
-      Good:<span></span>
-    </ListItem>
-    <ListItem>
-      Neutral:<span></span>
-    </ListItem>
-    <ListItem>
-      Bad:<span></span>
-    </ListItem>
-  </List>
-);
+const Statistics = ({ options, total, positiveFeedback }) => {
+  const btnNames = Object.keys(options);
+
+  return (
+    <List>
+      {btnNames.map(name => (
+        <li key={name}>
+          <TextFromState>
+            {name}:<span>{options[name]}</span>
+          </TextFromState>
+        </li>
+      ))}
+      <li>
+        <Text>
+          Total:<span>{total}</span>
+        </Text>
+      </li>
+      <li>
+        <Text>
+          Positive feedback:<span>{positiveFeedback || 0}%</span>
+        </Text>
+      </li>
+    </List>
+  );
+};
 
 export default Statistics;

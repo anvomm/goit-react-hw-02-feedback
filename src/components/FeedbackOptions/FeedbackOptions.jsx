@@ -1,15 +1,16 @@
 import { List, Button } from './FeedbackOptions.styled';
 
-export const FeedbackOptions = props => (
-  <List>
-    <li>
-      <Button type="button">good</Button>
-    </li>
-    <li>
-      <Button type="button">neutral</Button>
-    </li>
-    <li>
-      <Button type="button">bad</Button>
-    </li>
-  </List>
-);
+export const FeedbackOptions = ({ options, addFeedbackScore }) => {
+  const btnNames = Object.keys(options);
+  return (
+    <List>
+      {btnNames.map(name => (
+        <li key={name}>
+          <Button type="button" onClick={addFeedbackScore}>
+            {name}
+          </Button>
+        </li>
+      ))}
+    </List>
+  );
+};

@@ -6,6 +6,13 @@ export const List = styled.ul`
   gap: 10px;
 `;
 
-export const ListItem = styled.li`
+export const Text = styled.p`
+  display: flex;
+  justify-content: center;
+  gap: 5px;
   font-size: 18px;
+`;
+
+export const TextFromState = styled(Text)`
+  text-transform: capitalize;
 `;
