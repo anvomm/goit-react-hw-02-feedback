@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { GlobalStyles } from 'utils/GlobalStyles';
 import { Section } from './Section/Section';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
+import Statistics from './Statistics/Statistics';
 
 export class App extends Component {
   state = {
@@ -15,6 +16,9 @@ export class App extends Component {
       <div>
         <Section title="Please leave feedback">
           <FeedbackOptions></FeedbackOptions>
+        </Section>
+        <Section title="Statistics">
+          <Statistics></Statistics>
         </Section>
         <GlobalStyles />
       </div>
