@@ -12,7 +12,3 @@ export const Text = styled.p`
   gap: 5px;
   font-size: 18px;
 `;
-
-export const TextFromState = styled(Text)`
-  text-transform: capitalize;
-`;
