@@ -35,14 +35,16 @@ export class App extends Component {
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={this.state}
-            addFeedbackScore={this.addFeedbackScore}
+            onLeaveFeedback={this.addFeedbackScore}
           ></FeedbackOptions>
         </Section>
         <Section title="Statistics">
           <Statistics
-            options={this.state}
+            good={this.state.good}
+            neutral={this.state.neutral}
+            bad={this.state.bad}
             total={this.countTotalFeedback()}
-            positiveFeedback={this.countPositiveFeedbackPercentage()}
+            positivePercentage={this.countPositiveFeedbackPercentage()}
           ></Statistics>
         </Section>
         <GlobalStyles />
