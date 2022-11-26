@@ -3,7 +3,7 @@ import { SectionStyle, Title } from './Section.styled';
 
 export const Section = ({ title, children }) => (
   <SectionStyle>
-    {title && <Title>{title}</Title>}
+    <Title>{title}</Title>
     {children}
   </SectionStyle>
 );
