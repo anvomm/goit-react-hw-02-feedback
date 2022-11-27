@@ -12,11 +12,9 @@ export class App extends Component {
     bad: 0,
   };
 
-  addFeedbackScore = e => {
-    const feedbackScore = e.target.textContent;
-    document.activeElement.blur();
+  addFeedbackScore = option => {
     this.setState(prevState => ({
-      [feedbackScore]: (prevState[feedbackScore] += 1),
+      [option]: (prevState[option] += 1),
     }));
   };
 
