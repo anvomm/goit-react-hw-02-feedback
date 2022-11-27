@@ -1,4 +1,3 @@
-import { getActiveElement } from '@testing-library/user-event/dist/utils';
 import PropTypes from 'prop-types';
 import { List, Button } from './FeedbackOptions.styled';
 
