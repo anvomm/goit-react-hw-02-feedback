@@ -1,3 +1,4 @@
+import { getActiveElement } from '@testing-library/user-event/dist/utils';
 import PropTypes from 'prop-types';
 import { List, Button } from './FeedbackOptions.styled';
 
@@ -9,7 +10,8 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
         <li key={name}>
           <Button
             type="button"
-            onClick={() => {
+            onClick={e => {
+              e.target.blur();
               onLeaveFeedback(name);
             }}
           >
